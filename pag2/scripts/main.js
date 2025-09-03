@@ -1,4 +1,38 @@
 
+function getData2(form){
+    console.log("este es el form: "+form);
+    var formData = new FormData(form);
+
+    for(var pair of formData.entries()){
+        console.log(pair[0] +": "+ pair[1]);
+    }
+
+    var var1 =(Object.fromEntries(formData));
+    console.log(JSON.stringify(Object.fromEntries(formData),null,4));
+
+    if(document.getElementById("msg") !=null){
+        document.getElementById("msg").innerHTML = null;
+    }else{
+        msg= "<p id='msg'>Formulario Enviado con Exito<p>"
+    }
+    document.getElementById("FormLogin").innerHTML += msg;
+    console.log("este es el var1 "+var1["email"]);
+    
+}
+document.getElementById("FormLogin").addEventListener("submit", function (e){
+    
+    e.preventDefault();
+    getData2(e.target);
+  
+})
+
+
+
+
+
+
+
+
 function getData(form){
     console.log("este es el form: "+form);
     var formData = new FormData(form);
