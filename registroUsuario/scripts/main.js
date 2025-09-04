@@ -32,7 +32,7 @@ document.getElementById("FormLogin").addEventListener("submit", function (e){
 
 
 
-/* 
+/*
 function getData(form){
     console.log("este es el form: "+form);
     var formData = new FormData(form);
@@ -57,6 +57,7 @@ function getData(form){
 //var edad = func_leer_edad(Object.fromEntries(formData))
 //mensaje = func_get_msg (edad)
 // func_escribir_msg(msg)
+
 function rangoEdad(edad){
     var msg="";
     if (edad < 18 ){
@@ -84,4 +85,4 @@ function varHola(nom){
 }
 var mensaje = varHola("juan");
 document.writeln("<h3>"+mensaje+"<h3/>");
-*/
+*/ 
